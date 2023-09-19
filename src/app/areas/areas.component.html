@@ -1,1 +1,32 @@
-<p>areas works!</p>
+<div class="main_wrapper">
+  <h2>Areas List</h2>
+  <button routerLink="create">Crear</button>
+  <button [routerLink]="['/dashboard']">Go Back</button>
+
+  <div class="table">
+    <div class="titles">
+      <span>Code</span>
+      <span>Name</span>
+      <span>Status</span>
+      <span></span>
+      <span></span>
+    </div>
+    <div class="rows">
+      <div *ngFor="let area of areas" class="row">
+        <span class="row">{{area.code}}</span>
+        <span class="row">{{area.name}}</span>
+        <span class="row">{{area.status ? "Active" : "Inactive"}}</span>
+        <span
+          ><button [routerLink]="['edit', area.code]">
+            <span class="material-symbols-outlined"> edit </span>
+          </button></span
+        >
+        <span
+          ><button (click)="deleteUser(area.code)">
+            <span class="material-symbols-outlined"> delete </span>
+          </button></span
+        >
+      </div>
+    </div>
+  </div>
+</div>

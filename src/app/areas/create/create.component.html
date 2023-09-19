@@ -1,0 +1,23 @@
+<h1>Create Area</h1>
+
+<a routerLink="/areas">Go Back</a>
+
+<form [formGroup]="areaForm" (ngSubmit)="onSubmit()">
+    <div class="form_group">
+        <label for="">Code</label>
+        <input type="number" id="code" formControlName="code" required>
+    </div>
+    <div class="form_group">
+        <label for="">Name</label>
+        <input type="text" id="name" formControlName="name" required>
+    </div>
+    <div class="form_group">
+        <label for="">Lider</label>
+        <select id="lider" formControlName="lider">
+            <option value="">-- Select --</option>
+            <option *ngFor="let user of users" [value]="user.document_number">{{user.first_name}} {{user.last_name}}</option>
+        </select>
+    </div>
+
+    <button type="submit" [disabled]="!areaForm.valid">Create</button>
+</form>
