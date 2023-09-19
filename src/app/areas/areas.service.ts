@@ -11,6 +11,10 @@ export class AreaService {
     return this.http.get<any>(this.URL);
   }
 
+  getCount() {
+    return this.http.get<any>(`${this.URL}/count`)
+  }
+
   getOneArea(areaCode: number) {
     return this.http.get<any>(`${this.URL}/${areaCode}`)
   }

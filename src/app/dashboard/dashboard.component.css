@@ -37,7 +37,7 @@
     justify-content: center;
     align-items: center;
     cursor: pointer;
-    border: 2px solid var(--clr-text);
+    border: 1px solid var(--clr-text);
     border-radius: 1vw;
     background-color: var(--clr-blue);
 }

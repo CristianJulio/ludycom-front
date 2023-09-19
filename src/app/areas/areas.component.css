@@ -2,6 +2,26 @@
     margin: 3vh 2vw;
 }
 
+.buttonsWrapper {
+    display: flex;
+    gap: 1vw;
+    margin-bottom: 1vh;
+}
+
+.buttonsWrapper button {
+    color: var(--clr-white);
+    cursor: pointer;
+    font-size: 0.8vw;
+    border: none;
+    background-color: var(--clr-blue);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .5vw;
+    padding: .5vh .5vw;
+    border-radius: .5vw;
+}
+
 .table {
     width: fit-content;
 }
@@ -30,10 +50,16 @@
     grid-template-columns: 11.4vw 11.4vw 11vw 5vw 5vw;
 }
 
-.row span {
+.row > span {
     text-align: center;
     border: 1px solid blue;
     padding: 1vh 1vw;
     color: var(--clr-text);
     font-size: 0.85vw;
+}
+
+.row span button {
+    background: none;
+    border: none;
+    cursor: pointer;
 }

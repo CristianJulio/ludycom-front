@@ -6,6 +6,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { CreateComponent } from './create/create.component';
 import { EditComponent } from './edit/edit.component';
+import { HeaderModule } from '../header/header.module';
 
 
 
@@ -14,7 +15,8 @@ import { EditComponent } from './edit/edit.component';
   imports: [
     CommonModule,
     RouterModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HeaderModule
   ],
   providers: [AreaService]
 })

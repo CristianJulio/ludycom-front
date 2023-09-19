@@ -1,14 +1,13 @@
 import { NgModule } from "@angular/core";
 import { DashboardComponent } from "./dashboard.component";
 import { RouterModule } from "@angular/router";
-import { HeaderComponent } from "../header/header.component";
+import { HeaderModule } from "../header/header.module";
 
 @NgModule({
     declarations: [
-        DashboardComponent,
-        HeaderComponent
+        DashboardComponent
     ],
-    imports: [RouterModule],
-    exports: [DashboardComponent, HeaderComponent],
+    imports: [RouterModule, HeaderModule],
+    exports: [DashboardComponent],
 })
 export class DashboardModule {}

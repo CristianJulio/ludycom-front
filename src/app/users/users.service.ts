@@ -15,6 +15,10 @@ export class UserService {
         return this.http.get<any>(`${this.URL}/${document_number}`)
     }
 
+    getCount() {
+        return this.http.get<any>(`${this.URL}/count`)
+    }
+
     createUser(userBody: any) {
         const { second_name, ...rest } = userBody
 
