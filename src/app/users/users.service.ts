@@ -11,6 +11,16 @@ export class UserService {
         return this.http.get<any>(this.URL)
     }
 
+    createUser(userBody: any) {
+        const { second_name, ...rest } = userBody
+
+        if(!second_name) {
+            return this.http.post(this.URL, rest)
+        }
+        
+        return this.http.post(this.URL, userBody)
+    }
+
     deleteUser(document_number: number) {
         return this.http.delete(`${this.URL}/${document_number}`)
     }

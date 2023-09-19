@@ -14,6 +14,8 @@ import { AreasComponent } from './areas/areas.component';
 import { UsersModule } from './users/users.module';
 import { AreasModule } from './areas/areas.module';
 import { HeaderComponent } from './header/header.component';
+import { CreateComponent } from './users/create/create.component';
+import { EditComponent } from './users/edit/edit.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +28,8 @@ import { HeaderComponent } from './header/header.component';
       {path: 'login', component: LoginComponent},
       {path: 'dashboard', component: DashboardComponent},
       {path: 'users', component: UsersComponent},
+      {path: 'users/create', component: CreateComponent},
+      {path: 'users/edit/:document_number', component: EditComponent},
       {path: 'areas', component: AreasComponent},
       {path: '', redirectTo: '/login', pathMatch: 'full'},
     ]),
