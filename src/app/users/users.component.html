@@ -1,0 +1,43 @@
+<!-- <app-header /> -->
+<div class="main_wrapper">
+  <h1>Users List</h1>
+
+  <button>
+    Crear <span class="material-symbols-outlined"> add_circle </span>
+  </button>
+
+  <div class="table">
+    <div class="titles">
+      <span>Nombres</span>
+      <span>Apellidos</span>
+      <span>Fecha de nacimiento</span>
+      <span>Email</span>
+      <span># DOC</span>
+      <span>Salario</span>
+      <span>Estado</span>
+      <span></span>
+      <span></span>
+    </div>
+    <div class="rows">
+      <div *ngFor="let user of users" class="row">
+        <span>{{ user.first_name }} {{ user.second_name || "" }}</span>
+        <span>{{ user.last_name }} {{ user.second_last_name }}</span>
+        <span>{{ user.date_of_birth | date }}</span>
+        <span>{{ user.email }}</span>
+        <span>{{ user.document_number }}</span>
+        <span>{{ user.salary }}</span>
+        <span>{{ user.status ? "Active" : "Inactive" }}</span>
+        <span
+          ><button>
+            <span class="material-symbols-outlined"> edit </span>
+          </button></span
+        >
+        <span
+          ><button (click)="deleteuser(user.document_number)">
+            <span class="material-symbols-outlined"> delete </span>
+          </button></span
+        >
+      </div>
+    </div>
+  </div>
+</div>

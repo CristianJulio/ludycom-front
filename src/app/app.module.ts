@@ -9,10 +9,15 @@ import { AppComponent } from './app.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { DashboardModule } from './dashboard/dashboard.module';
 import { LoginComponent } from './login/login.component';
+import { UsersComponent } from './users/users.component';
+import { AreasComponent } from './areas/areas.component';
+import { UsersModule } from './users/users.module';
+import { AreasModule } from './areas/areas.module';
+import { HeaderComponent } from './header/header.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
   ],
   imports: [
     BrowserModule,
@@ -20,10 +25,14 @@ import { LoginComponent } from './login/login.component';
     RouterModule.forRoot([
       {path: 'login', component: LoginComponent},
       {path: 'dashboard', component: DashboardComponent},
+      {path: 'users', component: UsersComponent},
+      {path: 'areas', component: AreasComponent},
       {path: '', redirectTo: '/login', pathMatch: 'full'},
     ]),
     LoginModule,
     DashboardModule,
+    UsersModule,
+    AreasModule
   ],
   providers: [],
   bootstrap: [AppComponent]
