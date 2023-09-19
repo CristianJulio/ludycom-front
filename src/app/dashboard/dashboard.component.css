@@ -1,0 +1,48 @@
+.info_wrapper {
+    display: flex;
+    gap: 3vw;
+    margin: 0 2vw 0 2vw;
+}
+
+.info_wrapper .info {
+    gap: .5vw;
+    color: var(--clr-text);
+}
+
+.info_wrapper .info div {
+    display: flex;
+    gap: 1vw;
+}
+
+.info_wrapper .info p {
+    color: #000;
+    font-size: 0.9vw;
+    font-weight: medium;
+}
+
+.info_wrapper .info span {
+    font-size: 0.8vw;
+}
+
+.squares {
+    margin: 3vh 2vw 3vh 2vw;
+    display: flex;
+    gap: 2vw;
+}
+
+.squares .users, .squares .areas {
+    width: 10vw;
+    aspect-ratio: 1 / 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border: 2px solid var(--clr-text);
+    border-radius: 1vw;
+    background-color: var(--clr-blue);
+}
+
+.squares .users span, .areas span {
+    font-size: 8vw;
+    color: var(--clr-white);
+}

@@ -1,0 +1,13 @@
+header {
+    background-color: var(--clr-blue);
+    color: var(--clr-white);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1vh 5vw;
+}
+
+header a {
+    text-decoration: none;
+    color: var(--clr-white);
+}
