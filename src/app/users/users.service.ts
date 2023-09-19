@@ -11,6 +11,10 @@ export class UserService {
         return this.http.get<any>(this.URL)
     }
 
+    getOneUser(document_number: number) {
+        return this.http.get<any>(`${this.URL}/${document_number}`)
+    }
+
     createUser(userBody: any) {
         const { second_name, ...rest } = userBody
 
@@ -19,6 +23,10 @@ export class UserService {
         }
         
         return this.http.post(this.URL, userBody)
+    }
+
+    updateUser(userBody: any, document_number: number) {
+        return this.http.put<any>(`${this.URL}/${document_number}`, userBody)
     }
 
     deleteUser(document_number: number) {
