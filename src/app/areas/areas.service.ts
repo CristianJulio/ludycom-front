@@ -11,8 +11,16 @@ export class AreaService {
     return this.http.get<any>(this.URL);
   }
 
+  getOneArea(areaCode: number) {
+    return this.http.get<any>(`${this.URL}/${areaCode}`)
+  }
+
   createArea(areaBody: any) {
     return this.http.post<any>(this.URL, areaBody)
+  }
+
+  updateArea(areaCode: number, areaBody: any) {
+    return this.http.put(`${this.URL}/${areaCode}`, areaBody)
   }
 
   deleteArea(areaCode: number) {

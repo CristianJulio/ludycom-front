@@ -16,9 +16,7 @@ export class CreateComponent implements OnInit {
     private areaService: AreaService,
     private userService: UserService,
     private router: Router
-  ) {
-
-  }
+  ) {}
   
   areaForm = new FormGroup({
     code: new FormControl(0),
